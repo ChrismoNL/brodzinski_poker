@@ -55,9 +55,9 @@ jobs:
         run: sed -i 's/#{STORE_PASSWORD}#/${{secrets.STORE_PASSWORD}}/g' android/key.properties
       - name: Update Keystore Key Password in Gradle Properties
         run: sed -i 's/#{KEY_PASSWORD}#/${{secrets.KEY_PASSWORD}}/g' android/key.properties
-      - uses: actions/setup-java@v1
+      - uses: actions/setup-java@v4
         with:
-          java-version: "12.x"
+          java-version: "22"
       - uses: subosito/flutter-action@v1
         with:
           channel: "stable"
