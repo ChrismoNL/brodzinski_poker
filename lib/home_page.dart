@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
     final screenSize = MediaQuery.of(context).size;
-    final cardHeight = screenSize.height * 0.6; // 60% of screen height
+    final cardHeight = screenSize.height * 0.8; // 80% of screen height
     final cardWidth = cardHeight * (2.5 / 3.5); // Maintain aspect ratio of 2.5:3.5
     final cardMargin = screenSize.height * 0.05; // 5% margin
 

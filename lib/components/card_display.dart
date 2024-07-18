@@ -25,12 +25,10 @@ class CardDisplay extends StatelessWidget {
       front: Container(
         width: cardWidth,
         height: cardHeight,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(8),
-          image: const DecorationImage(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
             image: AssetImage('assets/card_back.png'),
-            fit: BoxFit.cover,
+            fit: BoxFit.contain,
           ),
         ),
       ),
@@ -38,11 +36,9 @@ class CardDisplay extends StatelessWidget {
         width: cardWidth,
         height: cardHeight,
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(8),
           image: DecorationImage(
             image: AssetImage(cardImages[selectedCardIndex]),
-            fit: BoxFit.cover,
+            fit: BoxFit.contain,
           ),
         ),
       ),
