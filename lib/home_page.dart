@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
               ),
             if (_cardSelected)
               GestureDetector(
-                onTap: _revealCard,
+                onTap: (_cardSelected && !_cardRevealed) ? _revealCard : _reset,
                 child: Container(
                   margin: EdgeInsets.all(cardMargin),
                   child: CardDisplay(
